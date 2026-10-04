@@ -1,0 +1,49 @@
+{
+  "model": "ridge",
+  "alpha": 0.1,
+  "log_target": true,
+  "features": [
+    "promo",
+    "lag14",
+    "lag21",
+    "lag28",
+    "lag35",
+    "same_weekday_mean",
+    "level_28d",
+    "post_competitor",
+    "t",
+    "weekday_1",
+    "weekday_2",
+    "weekday_3",
+    "weekday_4",
+    "weekday_5",
+    "weekday_6",
+    "month_2",
+    "month_3",
+    "month_4",
+    "month_5",
+    "month_6",
+    "month_7",
+    "month_8",
+    "month_9",
+    "month_10",
+    "month_11",
+    "month_12"
+  ],
+  "metrics": {
+    "mae": 23.86766747636976,
+    "rmse": 31.115174806234215,
+    "mape": 5.356239985663355,
+    "bias": 2.0494898704980087
+  },
+  "horizon_days": 14,
+  "trained_at": "2026-10-04 11:42 UTC",
+  "trained_with": {
+    "python": "3.13.16",
+    "scikit_learn": "1.9.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "training_rows": 594,
+  "data_file": "store14_bakery_sales.csv"
+}

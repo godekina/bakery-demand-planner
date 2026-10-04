@@ -1,0 +1,21 @@
+# What this app needs to run, here and on Streamlit Community Cloud.
+#
+# Two kinds of line, and the difference matters:
+#
+#   scikit-learn is pinned EXACTLY, because models/model.joblib was created by
+#   that version. A pickled model is tied to the library that made it, and a
+#   different version may refuse to load it or load it with a warning you will
+#   not see in a deployed app.
+#
+#   Everything else is a lower bound. Pinning the whole file exactly is the most
+#   common reason a Community Cloud build fails: the exact build you used locally
+#   may not exist for the Python version the cloud picks.
+#
+# If you retrain the model yourself, update the scikit-learn pin to whatever
+# `python train.py` prints.
+
+scikit-learn==1.9.1
+joblib>=1.4
+pandas>=2.2
+numpy>=1.26
+streamlit>=1.40
